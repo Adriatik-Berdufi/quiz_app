@@ -1,5 +1,11 @@
 class QuizQuestions {
-  const QuizQuestions(this.text, this.answer);
-  final String text;
+  const QuizQuestions(this.question, this.answer);
+  final String question;
   final List<String> answer;
+
+  List<String> getShuffleAnswers() {
+    final shuffleList = List.of(answer);
+    shuffleList.shuffle();
+    return shuffleList;
+  }
 }
